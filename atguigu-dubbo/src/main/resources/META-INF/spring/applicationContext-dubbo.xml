@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://code.alibabatech.com/schema/dubbo 
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<!-- 1. 应用程序名称 -->
+	<dubbo:application name="atguigu-service-duboo"/>
+	<!-- 2.注册中心地址 -->
+	<dubbo:registry  protocol="zookeeper" address="192.168.100.101:2181"></dubbo:registry>
+	<!-- 3.当前服务访问端口及协议 -->
+	<dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
+	<dubbo:service interface="com.atguigu.dubbo.service.TbItemDubboService" ref="tbItemDubboServiceImpl"></dubbo:service>
+	<!-- class:实现类的全路径 -->
+	<bean id="tbItemDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbItemDubboServiceImpl"></bean>
+	 <!-- 内容分类服务 -->
+	<dubbo:service interface="com.atguigu.dubbo.service.TbContentCategoryDubboService" ref="tbContentCategoryDubboServiceImpl"></dubbo:service>
+	<bean id="tbContentCategoryDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbContentCategoryDubboServiceImpl"></bean>
+	
+	<!-- 内容服务 -->
+	<dubbo:service interface="com.atguigu.dubbo.service.TbContentDubboService" ref="tbContentDubboServiceImpl"></dubbo:service>
+	<bean id="tbContentDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbContentDubboServiceImpl"></bean>
+	
+	<!-- 商品描述服务 -->
+ 	<dubbo:service interface="com.atguigu.dubbo.service.TbItemDescDubboService" ref="tbItemDescDubboServiceImpl"></dubbo:service>
+	<bean id="tbItemDescDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbItemDescDubboServiceImpl"></bean>
+	
+	<!-- 商品规格参数服务 -->
+	<dubbo:service interface="com.atguigu.dubbo.service.TbItemParamItemDubboService" ref="tbItemParamItemDubboServiceImpl"></dubbo:service>
+	<bean id="tbItemParamItemDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbItemParamItemDubboServiceImpl"></bean>
+	
+	<!-- 用户服务 -->
+	<dubbo:service interface="com.atguigu.dubbo.service.TbUserDubboService" ref="tbUserDubboServiceImpl"></dubbo:service>
+	<bean id="tbUserDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbUserDubboServiceImpl"></bean>
+	
+	 <!-- 订单服务 -->
+	<dubbo:service interface="com.atguigu.dubbo.service.TbOrderDubboService" ref="tbOrderDubboServiceImpl"></dubbo:service>
+	<bean id="tbOrderDubboServiceImpl" class="com.atguigu.dubbo.service.impl.TbOrderDubboServiceImpl"></bean>
+	
+	
+	
+	<!-- 4.扫描duubo注解,不能使用,替换成配置文件方式来实现.否则和AOP有冲突.最根本的原因就是dubbo@Service无效. -->
+	<import resource="classpath:applicationContext-mybatis.xml"/>
+</beans>

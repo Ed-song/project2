@@ -1,0 +1,17 @@
+com\atguigu\mapper\TbOrderShippingMapper.class
+com\atguigu\mapper\TbItemParamItemMapper.class
+com\atguigu\dubbo\service\impl\TbItemParamItemDubboServiceImpl.class
+com\atguigu\mapper\TbContentCategoryMapper.class
+com\atguigu\mapper\TbItemMapper.class
+com\atguigu\mapper\TbContentMapper.class
+com\atguigu\mapper\TbUserMapper.class
+com\atguigu\mapper\TbItemCatMapper.class
+com\atguigu\dubbo\service\impl\TbContentDubboServiceImpl.class
+com\atguigu\mapper\TbOrderItemMapper.class
+com\atguigu\mapper\TbItemDescMapper.class
+com\atguigu\mapper\TbOrderMapper.class
+com\atguigu\dubbo\service\impl\TbUserDubboServiceImpl.class
+com\atguigu\dubbo\service\impl\TbItemDubboServiceImpl.class
+com\atguigu\dubbo\service\impl\TbContentCategoryDubboServiceImpl.class
+com\atguigu\dubbo\service\impl\TbItemDescDubboServiceImpl.class
+com\atguigu\mapper\TbItemParamMapper.class

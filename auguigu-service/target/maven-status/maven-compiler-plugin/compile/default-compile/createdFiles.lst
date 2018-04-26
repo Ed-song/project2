@@ -1,0 +1,6 @@
+com\atguigu\dubbo\service\TbUserDubboService.class
+com\atguigu\dubbo\service\TbItemDescDubboService.class
+com\atguigu\dubbo\service\TbContentCategoryDubboService.class
+com\atguigu\dubbo\service\TbItemParamItemDubboService.class
+com\atguigu\dubbo\service\TbItemDubboService.class
+com\atguigu\dubbo\service\TbContentDubboService.class

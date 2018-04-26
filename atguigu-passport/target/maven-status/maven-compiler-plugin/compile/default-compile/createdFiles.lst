@@ -1,0 +1,5 @@
+com\atguigu\passport\service\TbUserService.class
+com\atguigu\passport\dao\impl\JedisPoolDaoImpl.class
+com\atguigu\passport\controller\TbUserController.class
+com\atguigu\passport\service\impl\TbUserServiceImpl.class
+com\atguigu\passport\dao\JedisPoolDao.class
